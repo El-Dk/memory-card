@@ -10,7 +10,7 @@ const Header = (props) => {
         Score: {props.score}
       </span>
       <span>
-        Max-score: {props.maxScore}
+        Max Score: {props.maxScore}
       </span>
     </div>
   </header>);

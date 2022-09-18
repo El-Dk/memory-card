@@ -4,7 +4,7 @@ const Card = (props) => {
   const { cardData } = props;
   return (<div className="card" onClick={props.modifyScore} data-value={cardData._id}>
     <div className="card-img-container">
-      <img className="card-img" src={cardData.src} />
+      <img className="card-img" src={cardData.src} alt={cardData.name} />
     </div>
     <span className="card-name">{cardData.name}</span>
   </div>);

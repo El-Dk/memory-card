@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     score > maxScore && setMaxScore(score);
-  }, [score]);
+  }, [score, maxScore]);
 
   const modifyScore = (event) => {
     setCardsInGame(sortCards(cardsInGame))
