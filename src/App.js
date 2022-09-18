@@ -19,20 +19,26 @@ const sortCards = (cards = []) => {
 
 const levels = [
   {
-    pointsToWin: 4
+    characters: 4,
+    pointsToWin: 4,
+    pointsPerGuess: 1
   },
   {
-    pointsToWin: 13
+    characters: 9,
+    pointsToWin: 22,
+    pointsPerGuess: 2
+  },
+  {
+    characters: 16,
+    pointsToWin: 70,
+    pointsPerGuess: 3
   }
-  // {
-  //   pointsToWin: 29
-  // }
 ];
 
 function App() {
   const [score, setScore] = useState(0);
   const [maxScore, setMaxScore] = useState(0);
-  const [cardsInGame, setCardsInGame] = useState(cardsContent.slice(0, levels[0].pointsToWin));
+  const [cardsInGame, setCardsInGame] = useState(cardsContent.slice(0, levels[0].characters));
   const [cardsPicked, setCardsPicked] = useState([]);
   const [level, setLevel] = useState(0);
   const [win, setWin] = useState(false);
@@ -48,7 +54,7 @@ function App() {
 
   useEffect(() => {
     if (level < levels.length) {
-      setCardsInGame(cardsContent.slice(0, levels[level].pointsToWin));
+      setCardsInGame(cardsContent.slice(0, levels[level].characters));
       setCardsPicked([]);
     } else {
       setWin(true);
@@ -60,7 +66,7 @@ function App() {
     const { dataset: { value } } = event.currentTarget;
     if (!cardsPicked.includes(value)) {
       cardsPicked.push(value);
-      setScore(score + 1);
+      setScore(score + levels[level].pointsPerGuess);
     } else {
       resetGame();
     }

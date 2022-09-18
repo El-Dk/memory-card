@@ -9,7 +9,13 @@ const chef = require('./images/chef.png');
 const detectiveHarris = require('./images/detective-harris.png');
 const garrison = require('./images/garrison.png');
 const satan = require('./images/satan.png');
-// const  = require('./images/.png');
+const butters = require('./images/butters.png');
+const ike = require('./images/ike.png');
+const mrSlave = require('./images/mr-slave.png');
+const pCPrincipal = require('./images/pc-principal.png');
+const terranceAndPhilip = require('./images/terrance-and-philip.png');
+const towelie = require('./images/towelie.png');
+const tweekAndCraig = require('./images/tweek-and-craig.png');
 
 const cardsContent = [
   {
@@ -56,12 +62,42 @@ const cardsContent = [
     _id: uniqid(),
     name: 'Satan',
     src: satan
+  },
+  {
+    _id: uniqid(),
+    name: 'Butters',
+    src: butters
+  },
+  {
+    _id: uniqid(),
+    name: 'Ike',
+    src: ike
+  },
+  {
+    _id: uniqid(),
+    name: 'Mr. Slave',
+    src: mrSlave
+  },
+  {
+    _id: uniqid(),
+    name: 'PC Principal',
+    src: pCPrincipal
+  },
+  {
+    _id: uniqid(),
+    name: 'Terrance & Philip',
+    src: terranceAndPhilip
+  },
+  {
+    _id: uniqid(),
+    name: 'Towelie',
+    src: towelie
+  },
+  {
+    _id: uniqid(),
+    name: 'Tweek & Craig',
+    src: tweekAndCraig
   }
-  // {
-  //   _id: uniqid(),
-  //   name: ,
-  //   src: 
-  // },
 ];
 
 export default cardsContent;
